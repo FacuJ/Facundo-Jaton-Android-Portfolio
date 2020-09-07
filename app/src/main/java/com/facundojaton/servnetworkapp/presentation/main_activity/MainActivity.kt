@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp.presentation
+package com.facundojaton.servnetworkapp.presentation.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

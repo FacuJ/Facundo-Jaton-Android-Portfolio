@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".presentation.login_activity.view.LoginActivity"></activity>
-        <activity android:name=".presentation.MainActivity">
+        <activity android:name=".presentation.main_activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
