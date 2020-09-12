@@ -4,53 +4,34 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.Window
+import android.view.WindowManager
+import android.widget.Toast
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity<Presenter : BasePresenter> : AppCompatActivity() {
-
-    private lateinit var presenter: Presenter
-
-    protected abstract fun createPresenter(context: Context): Presenter
+abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        presenter = createPresenter(this)
-        presenter.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        @Suppress("DEPRECATION")
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+        setContentView(getLayout())
     }
 
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
-        presenter.onSaveInstanceState(outState)
-    }
+    @LayoutRes
+    abstract fun getLayout(): Int
 
-    override fun onPause() {
-        super.onPause()
-        presenter.onPause()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        presenter.onResume()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        presenter.onActivityResult(requestCode, resultCode, data)
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
+    fun Context.toast(
+        message: String,
+        context: Context = applicationContext,
+        duration: Int = Toast.LENGTH_SHORT
     ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        presenter.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        Toast.makeText(context, message, duration).show()
     }
-
 
 }
