@@ -4,19 +4,29 @@ import com.facundojaton.servnetworkapp.base.BasePresenter
 import com.facundojaton.servnetworkapp.domain.interactor.LoginInteractor
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 
-class LoginPresenter constructor(
-    view: LoginContract.View,
-    loginInteractor: LoginInteractor
-) : BasePresenter(),
-    LoginContract.Presenter {
-
+class LoginPresenter() : LoginContract.Presenter {
     var view: LoginContract.View? = null
-    var loginInteractor: LoginInteractor? = null
 
-    init {
+    override fun attachView(view: LoginContract.View) {
         this.view = view
-        this.loginInteractor = loginInteractor
     }
 
+    override fun dettachView() {
+        this.view = null
+    }
+
+    override fun isViewAttached(): Boolean {
+        return this.view != null
+    }
+
+    override fun signInUserWithEmailAndPassword(email: String, pass: String) {
+        view?.activateWaitingMode()
+        //ToDo: Interactor Logic with callbacks
+        view?.showMessage("ERROR FROM PRESENTER")
+    }
+
+    override fun checkEmptyFields(email: String, pass: String): Boolean {
+        return email.isEmpty() || pass.isEmpty()
+    }
 
 }

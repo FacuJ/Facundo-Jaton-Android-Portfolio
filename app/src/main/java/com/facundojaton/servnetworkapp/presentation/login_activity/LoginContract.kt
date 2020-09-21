@@ -7,9 +7,22 @@ interface LoginContract {
         fun deactivateWaitingMode()
         fun showMessage(message: String)
         fun login()
+        fun navigateToMain()
+        fun navigateToRegister()
     }
 
     interface Presenter {
+        fun attachView(view: LoginContract.View)
+        fun dettachView()
+        fun isViewAttached(): Boolean
+        fun signInUserWithEmailAndPassword(
+            email: String,
+            pass: String
+        )
+        fun checkEmptyFields(
+            email: String,
+            pass: String
+        ): Boolean
 
     }
 }
