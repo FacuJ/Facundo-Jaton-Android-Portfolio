@@ -1,5 +1,6 @@
 package com.facundojaton.servnetworkapp.presentation.login_activity.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.facundojaton.servnetworkapp.R
@@ -7,6 +8,7 @@ import com.facundojaton.servnetworkapp.base.BaseActivity
 import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractorImpl
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 import com.facundojaton.servnetworkapp.presentation.login_activity.presenter.LoginPresenter
+import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
@@ -50,11 +52,12 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun navigateToMain() {
-        TODO("Not yet implemented")
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     override fun navigateToRegister() {
-        TODO("Not yet implemented")
+        //startActivity(Intent(this,RegisterActivity::class.java))
     }
 
 }

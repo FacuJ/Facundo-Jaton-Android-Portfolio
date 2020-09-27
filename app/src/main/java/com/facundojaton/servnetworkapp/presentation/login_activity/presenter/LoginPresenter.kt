@@ -28,7 +28,6 @@ class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Present
 
     override fun signInUserWithEmailAndPassword(email: String, pass: String) {
         view?.activateWaitingMode()
-        //ToDo: Interactor Logic with callbacks
         signInInteractor?.signInWithEmailAndPassword(
             email, pass, object : SignInInteractor.SignInCallback{
                 override fun onSignInSuccess() {
@@ -47,7 +46,6 @@ class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Present
 
             }
         )
-        view?.showMessage("ERROR FROM PRESENTER")
     }
 
     override fun checkEmptyFields(email: String, pass: String): Boolean {
