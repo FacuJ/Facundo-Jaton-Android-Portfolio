@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.View
 import com.facundojaton.servnetworkapp.R
 import com.facundojaton.servnetworkapp.base.BaseActivity
+import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractorImpl
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 import com.facundojaton.servnetworkapp.presentation.login_activity.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
 
-    lateinit var presenter: LoginPresenter
+    private lateinit var presenter: LoginPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        presenter = LoginPresenter()
+        presenter = LoginPresenter(SignInInteractorImpl())
         presenter.attachView(this)
 
         btnLogin.setOnClickListener {
