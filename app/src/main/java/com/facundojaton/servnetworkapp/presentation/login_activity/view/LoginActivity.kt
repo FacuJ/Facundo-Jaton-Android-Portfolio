@@ -62,4 +62,13 @@ class LoginActivity : BaseActivity(), LoginContract.View {
         //startActivity(Intent(this,RegisterActivity::class.java))
     }
 
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        presenter.dettachView()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.dettachView()
+    }
 }

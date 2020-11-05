@@ -1,7 +1,5 @@
 package com.facundojaton.servnetworkapp.presentation.login_activity.presenter
 
-import com.facundojaton.servnetworkapp.base.BasePresenter
-import com.facundojaton.servnetworkapp.domain.interactor.LoginInteractor
 import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractor
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 

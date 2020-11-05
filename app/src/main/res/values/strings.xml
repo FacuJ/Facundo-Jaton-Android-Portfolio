@@ -5,4 +5,7 @@
     <string name="login">Login</string>
     <string name="password_recover">Recover password</string>
     <string name="main_text_clean_firestore">Main clean firestore login</string>
+    <string name="name">Name</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="register">Sign Up</string>
 </resources>
