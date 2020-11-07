@@ -41,8 +41,8 @@ class LoginActivity : BaseActivity(), LoginContract.View {
         pbLogin.visibility = View.GONE
     }
 
-    override fun showMessage(message: String) {
-        toast(message)
+    override fun showMessage(message: String?) {
+        message?.let { toast(it) }
     }
 
     override fun login() {
@@ -69,10 +69,12 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         presenter.dettachView()
+        presenter.dettachJob()
     }
 
     override fun onDestroy() {
         super.onDestroy()
         presenter.dettachView()
+        presenter.dettachJob()
     }
 }

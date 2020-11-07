@@ -2,11 +2,17 @@ package com.facundojaton.servnetworkapp.presentation.login_activity.presenter
 
 import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractor
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
-class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Presenter {
+class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Presenter, CoroutineScope {
 
     var view: LoginContract.View? = null
     var signInInteractor: SignInInteractor? = null
+    val job = Job()
+
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.Main + job
 
     init {
         this.signInInteractor = signInInteractor
@@ -20,30 +26,32 @@ class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Present
         this.view = null
     }
 
+    override fun dettachJob() {
+        coroutineContext.cancel()
+    }
+
     override fun isViewAttached(): Boolean {
         return this.view != null
     }
 
     override fun signInUserWithEmailAndPassword(email: String, pass: String) {
-        view?.activateWaitingMode()
-        signInInteractor?.signInWithEmailAndPassword(
-            email, pass, object : SignInInteractor.SignInCallback{
-                override fun onSignInSuccess() {
-                    if(isViewAttached()){
-                        view?.deactivateWaitingMode()
-                        view?.navigateToMain()
-                    }
-                }
 
-                override fun onSignInFailure(errorMessage: String) {
-                    if(isViewAttached()){
-                        view?.deactivateWaitingMode()
-                        view?.showMessage(errorMessage)
-                    }
-                }
 
+        launch {
+            view?.activateWaitingMode()
+            try {
+                signInInteractor?.signInWithEmailAndPassword(email, pass)
+                if (isViewAttached()) {
+                    view?.deactivateWaitingMode()
+                    view?.navigateToMain()
+                }
+            } catch (e: Exception) {
+                if (isViewAttached()) {
+                    view?.showMessage(e.message)
+                    view?.deactivateWaitingMode()
+                }
             }
-        )
+        }
     }
 
     override fun checkEmptyFields(email: String, pass: String): Boolean {
