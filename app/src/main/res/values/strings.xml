@@ -8,4 +8,5 @@
     <string name="name">Name</string>
     <string name="repeat_password">Repeat password</string>
     <string name="register">Sign Up</string>
+    <string name="not_registered_yet_sign_up">Are you not registered yet? Sign Up!</string>
 </resources>

@@ -9,6 +9,7 @@ import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignIn
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 import com.facundojaton.servnetworkapp.presentation.login_activity.presenter.LoginPresenter
 import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
+import com.facundojaton.servnetworkapp.presentation.registration_activity.view.RegisterActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
@@ -22,6 +23,9 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
         btnLogin.setOnClickListener {
             login()
+        }
+        btn_login_new_account?.setOnClickListener {
+            navigateToRegister()
         }
     }
 
@@ -59,7 +63,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun navigateToRegister() {
-        //startActivity(Intent(this,RegisterActivity::class.java))
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     override fun onDetachedFromWindow() {

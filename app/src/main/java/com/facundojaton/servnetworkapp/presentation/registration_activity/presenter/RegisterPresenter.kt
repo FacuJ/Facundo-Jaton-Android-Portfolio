@@ -43,6 +43,22 @@ class RegisterPresenter(registerInteractor: RegisterInteractor) :
     }
 
     override fun signUp(fullName: String, email: String, password: String) {
-        TODO("Not yet implemented")
+        view?.showProgress()
+        registerInteractor?.signUp(
+            fullName,
+            email,
+            password,
+            object : RegisterInteractor.RegisterCallback {
+                override fun onRegisterSuccess() {
+                    view?.navigateToMain()
+                    view?.hideProgress()
+                }
+
+                override fun onRegisterFailure(errorMessage: String) {
+                    view?.showError(errorMessage)
+                    view?.hideProgress()
+                }
+
+            })
     }
 }

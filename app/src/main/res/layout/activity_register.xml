@@ -7,7 +7,7 @@
     tools:context=".presentation.registration_activity.view.RegisterActivity">
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etName"
+        android:id="@+id/et_register_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,40 +20,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etRegisterEmail"
+        android:id="@+id/et_register_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/etName"
-        app:layout_constraintStart_toStartOf="@+id/etName"
-        app:layout_constraintTop_toBottomOf="@id/etName" />
+        app:layout_constraintEnd_toEndOf="@+id/et_register_name"
+        app:layout_constraintStart_toStartOf="@+id/et_register_name"
+        app:layout_constraintTop_toBottomOf="@id/et_register_name" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etRegisterPassword"
+        android:id="@+id/et_register_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/etRegisterEmail"
-        app:layout_constraintStart_toStartOf="@+id/etRegisterEmail"
-        app:layout_constraintTop_toBottomOf="@id/etRegisterEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/et_register_email"
+        app:layout_constraintStart_toStartOf="@+id/et_register_email"
+        app:layout_constraintTop_toBottomOf="@id/et_register_email" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etRepeatRegisterPassword"
+        android:id="@+id/et_repeat_register_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/repeat_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/etName"
-        app:layout_constraintStart_toStartOf="@+id/etRegisterPassword"
-        app:layout_constraintTop_toBottomOf="@id/etRegisterPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/et_register_name"
+        app:layout_constraintStart_toStartOf="@+id/et_register_password"
+        app:layout_constraintTop_toBottomOf="@id/et_register_password" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegister"
+        android:id="@+id/btn_register"
         style="@style/Widget.AppCompat.ActionButton.Overflow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -65,11 +65,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etRepeatRegisterPassword"
+        app:layout_constraintTop_toBottomOf="@id/et_repeat_register_password"
         app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
-        android:id="@+id/pbRegister"
+        android:id="@+id/pb_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
