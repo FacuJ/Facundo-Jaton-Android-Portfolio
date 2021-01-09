@@ -3,42 +3,43 @@ package com.facundojaton.servnetworkapp.presentation.login_activity.view
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.facundojaton.servnetworkapp.R
 import com.facundojaton.servnetworkapp.base.BaseActivity
+import com.facundojaton.servnetworkapp.databinding.ActivityLoginBinding
 import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractorImpl
 import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 import com.facundojaton.servnetworkapp.presentation.login_activity.presenter.LoginPresenter
 import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
 import com.facundojaton.servnetworkapp.presentation.registration_activity.view.RegisterActivity
-import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
 
     private lateinit var presenter: LoginPresenter
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+
         presenter = LoginPresenter(SignInInteractorImpl())
         presenter.attachView(this)
 
-        btnLogin.setOnClickListener {
-            login()
+        binding.apply {
+            setContentView(root)
+            btnLogin.setOnClickListener {
+                login()
+            }
+            btnLoginNewAccount.setOnClickListener {
+                navigateToRegister()
+            }
         }
-        btn_login_new_account?.setOnClickListener {
-            navigateToRegister()
-        }
-    }
-
-    override fun getLayout(): Int {
-        return R.layout.activity_login
     }
 
     override fun activateWaitingMode() {
-        pbLogin.visibility = View.VISIBLE
+        binding.pbLogin.visibility = View.VISIBLE
     }
 
     override fun deactivateWaitingMode() {
-        pbLogin.visibility = View.GONE
+        binding.pbLogin.visibility = View.GONE
     }
 
     override fun showMessage(message: String?) {
@@ -46,8 +47,8 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun login() {
-        val email = etEmail.text.toString().trim()
-        val password = etPassword.text.toString().trim()
+        val email = binding.etEmail.text.toString().trim()
+        val password = binding.etPassword.text.toString().trim()
         if (presenter.checkEmptyFields(email, password)) {
             toast("Complete both fields")
         } else {
@@ -73,8 +74,8 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         presenter.dettachView()
         presenter.dettachJob()
+        super.onDestroy()
     }
 }

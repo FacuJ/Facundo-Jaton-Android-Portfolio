@@ -1,13 +1,10 @@
 package com.facundojaton.servnetworkapp.base
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -20,11 +17,7 @@ abstract class BaseActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        setContentView(getLayout())
     }
-
-    @LayoutRes
-    abstract fun getLayout(): Int
 
     fun Context.toast(
         message: String,
@@ -32,6 +25,14 @@ abstract class BaseActivity : AppCompatActivity() {
         duration: Int = Toast.LENGTH_SHORT
     ) {
         Toast.makeText(context, message, duration).show()
+    }
+
+    fun Context.toast(
+        message: Int,
+        context: Context = applicationContext,
+        duration: Int = Toast.LENGTH_SHORT
+    ) {
+        Toast.makeText(context, getString(message), duration).show()
     }
 
 }

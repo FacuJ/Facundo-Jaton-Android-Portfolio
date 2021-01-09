@@ -5,7 +5,8 @@ import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Presenter, CoroutineScope {
+class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Presenter,
+    CoroutineScope {
 
     var view: LoginContract.View? = null
     var signInInteractor: SignInInteractor? = null
@@ -35,8 +36,6 @@ class LoginPresenter(signInInteractor: SignInInteractor) : LoginContract.Present
     }
 
     override fun signInUserWithEmailAndPassword(email: String, pass: String) {
-
-
         launch {
             view?.activateWaitingMode()
             try {

@@ -3,30 +3,31 @@ package com.facundojaton.servnetworkapp.presentation.registration_activity.view
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.facundojaton.servnetworkapp.R
 import com.facundojaton.servnetworkapp.base.BaseActivity
+import com.facundojaton.servnetworkapp.databinding.ActivityRegisterBinding
 import com.facundojaton.servnetworkapp.domain.interactor.register_interactor.RegisterInteractorImpl
 import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
 import com.facundojaton.servnetworkapp.presentation.registration_activity.RegisterContract
 import com.facundojaton.servnetworkapp.presentation.registration_activity.presenter.RegisterPresenter
-import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), RegisterContract.RegisterView {
 
     private lateinit var presenter: RegisterPresenter
+    private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+
         presenter = RegisterPresenter(RegisterInteractorImpl())
         presenter.attachView(this)
 
-        btn_register?.setOnClickListener {
-            signUp()
+        binding.apply {
+            setContentView(root)
+            btnRegister.setOnClickListener {
+                signUp()
+            }
         }
-    }
-
-    override fun getLayout(): Int {
-        return R.layout.activity_register
     }
 
     override fun navigateToMain() {
@@ -36,44 +37,44 @@ class RegisterActivity : BaseActivity(), RegisterContract.RegisterView {
     }
 
     override fun signUp() {
-        val fullName: String = et_register_name.text.toString().trim()
-        val email: String = et_register_email.text.toString().trim()
-        val password = et_register_password.text.toString().trim()
-        val passwordRepeat = et_repeat_register_password.text.toString().trim()
+        val fullName: String = binding.etRegisterName.text.toString().trim()
+        val email: String = binding.etRegisterEmail.text.toString().trim()
+        val password = binding.etRegisterPassword.text.toString().trim()
+        val passwordRepeat = binding.etRepeatRegisterPassword.text.toString().trim()
 
         /** -- ToDo All the logic should be on presenter, for testeability sake,
          * that also includes the following if statements (!) **/
 
         if (presenter.checkEmptyEmailAndName(fullName, email)) {
             //toDo: fix this -> separate both fields maybe
-            et_register_name.error = "Name or email invalid"
+            binding.etRegisterName.error = "Name or email invalid"
             return
         }
         if (!presenter.checkValidEmail(email)) {
-            et_register_email.error = "Email invalid"
+            binding.etRegisterEmail.error = "Email invalid"
             return
         }
         if (presenter.checkEmptyPasswords(password, passwordRepeat)) {
-            et_register_password.error = "Empty field"
-            et_repeat_register_password.error = "Empty field"
+            binding.etRegisterPassword.error = "Empty field"
+            binding.etRepeatRegisterPassword.error = "Empty field"
             return
         }
         if (!presenter.checkPasswordsMatch(password, passwordRepeat)) {
-            et_register_password.error = "Passwords don't match"
-            et_repeat_register_password.error = "Passwords don't match"
+            binding.etRegisterPassword.error = "Passwords don't match"
+            binding.etRepeatRegisterPassword.error = "Passwords don't match"
             return
         }
         presenter.signUp(fullName, email, password)
     }
 
     override fun showProgress() {
-        pb_register.visibility = View.VISIBLE
-        btn_register.isEnabled = false
+        binding.pbRegister.visibility = View.VISIBLE
+        binding.btnRegister.isEnabled = false
     }
 
     override fun hideProgress() {
-        pb_register?.visibility = View.GONE
-        btn_register.isEnabled = true
+        binding.pbRegister.visibility = View.GONE
+        binding.btnRegister.isEnabled = true
     }
 
     override fun showError(errorMessage: String) {
