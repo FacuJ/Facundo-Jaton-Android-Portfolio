@@ -42,11 +42,10 @@ class RegisterActivity : BaseActivity(), RegisterContract.RegisterView {
         val password = binding.etRegisterPassword.text.toString().trim()
         val passwordRepeat = binding.etRepeatRegisterPassword.text.toString().trim()
 
-        /** -- ToDo All the logic should be on presenter, for testeability sake,
+        /** -- All the logic should be on presenter, for testeability sake,
          * that also includes the following if statements (!) **/
 
         if (presenter.checkEmptyEmailAndName(fullName, email)) {
-            //toDo: fix this -> separate both fields maybe
             binding.etRegisterName.error = "Name or email invalid"
             return
         }

@@ -21,7 +21,7 @@ class RegisterInteractorImpl : RegisterInteractor {
                         ?.addOnCompleteListener {
                             if (it.isSuccessful) {
                                 listener.onRegisterSuccess()
-                            } else listener.onRegisterFailure(task.exception?.message.toString())
+                            } else listener.onRegisterFailure(it.exception?.message.toString())
                         }
                 } else {
                     listener.onRegisterFailure(
