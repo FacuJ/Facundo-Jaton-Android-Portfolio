@@ -1,15 +1,15 @@
-package com.facundojaton.servnetworkapp.presentation.login_activity.view
+package com.facundojaton.android_portfolio.presentation.login_activity.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.facundojaton.servnetworkapp.base.BaseActivity
-import com.facundojaton.servnetworkapp.databinding.ActivityLoginBinding
-import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractorImpl
-import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
-import com.facundojaton.servnetworkapp.presentation.login_activity.presenter.LoginPresenter
-import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
-import com.facundojaton.servnetworkapp.presentation.registration_activity.view.RegisterActivity
+import com.facundojaton.android_portfolio.base.BaseActivity
+import com.facundojaton.android_portfolio.databinding.ActivityLoginBinding
+import com.facundojaton.android_portfolio.domain.interactor.login_interactor.SignInInteractorImpl
+import com.facundojaton.android_portfolio.presentation.login_activity.LoginContract
+import com.facundojaton.android_portfolio.presentation.login_activity.presenter.LoginPresenter
+import com.facundojaton.android_portfolio.presentation.main_activity.view.MainActivity
+import com.facundojaton.android_portfolio.presentation.registration_activity.view.RegisterActivity
 
 class LoginActivity : BaseActivity(), LoginContract.View {
 

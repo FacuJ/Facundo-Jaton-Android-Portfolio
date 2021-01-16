@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp.presentation.login_activity
+package com.facundojaton.android_portfolio.presentation.login_activity
 
 interface LoginContract {
 

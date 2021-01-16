@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:59111218820:android:831b10efc6cb7783ab2cd1",
+        "android_client_info": {
+          "package_name": "com.facundojaton.android_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59111218820-qgkqp31dic22aenrvlj8ah8u7cfgnk7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.facundojaton.android_portfolio",
+            "certificate_hash": "b46d9c84a7927d88a264e90c5929bbb425841895"
+          }
+        },
+        {
+          "client_id": "59111218820-4f06edsvqu0l42802e6cu1talnpgste3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmDOShY0MXNwLO1PTtfAlcafEi9UmHI3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59111218820-4f06edsvqu0l42802e6cu1talnpgste3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:59111218820:android:d36ed1533e9f0b5fab2cd1",
         "android_client_info": {
           "package_name": "com.facundojaton.servnetworkapp"

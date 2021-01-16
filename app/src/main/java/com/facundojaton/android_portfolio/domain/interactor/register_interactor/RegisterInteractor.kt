@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp.domain.interactor.register_interactor
+package com.facundojaton.android_portfolio.domain.interactor.register_interactor
 
 interface RegisterInteractor {
 

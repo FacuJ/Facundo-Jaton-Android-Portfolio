@@ -1,8 +1,8 @@
-package com.facundojaton.servnetworkapp.presentation.main_activity.view
+package com.facundojaton.android_portfolio.presentation.main_activity.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.facundojaton.servnetworkapp.databinding.ActivityMainBinding
+import com.facundojaton.android_portfolio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,7 +1,7 @@
-package com.facundojaton.servnetworkapp.presentation.login_activity.presenter
+package com.facundojaton.android_portfolio.presentation.login_activity.presenter
 
-import com.facundojaton.servnetworkapp.domain.interactor.login_interactor.SignInInteractor
-import com.facundojaton.servnetworkapp.presentation.login_activity.LoginContract
+import com.facundojaton.android_portfolio.domain.interactor.login_interactor.SignInInteractor
+import com.facundojaton.android_portfolio.presentation.login_activity.LoginContract
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 

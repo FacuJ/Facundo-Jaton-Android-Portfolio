@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp.presentation.registration_activity
+package com.facundojaton.android_portfolio.presentation.registration_activity
 
 interface RegisterContract {
 

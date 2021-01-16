@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp.domain.interactor.login_interactor
+package com.facundojaton.android_portfolio.domain.interactor.login_interactor
 
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.suspendCancellableCoroutine

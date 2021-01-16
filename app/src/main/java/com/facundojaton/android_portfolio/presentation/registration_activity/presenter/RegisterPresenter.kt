@@ -1,8 +1,8 @@
-package com.facundojaton.servnetworkapp.presentation.registration_activity.presenter
+package com.facundojaton.android_portfolio.presentation.registration_activity.presenter
 
 import androidx.core.util.PatternsCompat
-import com.facundojaton.servnetworkapp.domain.interactor.register_interactor.RegisterInteractor
-import com.facundojaton.servnetworkapp.presentation.registration_activity.RegisterContract
+import com.facundojaton.android_portfolio.domain.interactor.register_interactor.RegisterInteractor
+import com.facundojaton.android_portfolio.presentation.registration_activity.RegisterContract
 
 class RegisterPresenter(registerInteractor: RegisterInteractor) :
     RegisterContract.RegisterPresenter {

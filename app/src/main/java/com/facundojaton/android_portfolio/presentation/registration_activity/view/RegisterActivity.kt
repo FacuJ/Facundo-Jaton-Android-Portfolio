@@ -1,14 +1,14 @@
-package com.facundojaton.servnetworkapp.presentation.registration_activity.view
+package com.facundojaton.android_portfolio.presentation.registration_activity.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.facundojaton.servnetworkapp.base.BaseActivity
-import com.facundojaton.servnetworkapp.databinding.ActivityRegisterBinding
-import com.facundojaton.servnetworkapp.domain.interactor.register_interactor.RegisterInteractorImpl
-import com.facundojaton.servnetworkapp.presentation.main_activity.view.MainActivity
-import com.facundojaton.servnetworkapp.presentation.registration_activity.RegisterContract
-import com.facundojaton.servnetworkapp.presentation.registration_activity.presenter.RegisterPresenter
+import com.facundojaton.android_portfolio.base.BaseActivity
+import com.facundojaton.android_portfolio.databinding.ActivityRegisterBinding
+import com.facundojaton.android_portfolio.domain.interactor.register_interactor.RegisterInteractorImpl
+import com.facundojaton.android_portfolio.presentation.main_activity.view.MainActivity
+import com.facundojaton.android_portfolio.presentation.registration_activity.RegisterContract
+import com.facundojaton.android_portfolio.presentation.registration_activity.presenter.RegisterPresenter
 
 class RegisterActivity : BaseActivity(), RegisterContract.RegisterView {
 

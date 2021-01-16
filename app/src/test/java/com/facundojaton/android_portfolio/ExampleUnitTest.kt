@@ -1,4 +1,4 @@
-package com.facundojaton.servnetworkapp
+package com.facundojaton.android_portfolio
 
 import org.junit.Test
 
