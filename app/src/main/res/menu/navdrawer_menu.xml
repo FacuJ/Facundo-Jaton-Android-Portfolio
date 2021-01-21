@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cv_fragment"
+        android:icon="@drawable/resume"
+        android:title="@string/cv" />
+    <!-- <item
+        android:id="@+id/rulesFragment"
+        android:icon="@drawable/rules"
+        android:title="@string/rules" /> -->
+
+</menu>

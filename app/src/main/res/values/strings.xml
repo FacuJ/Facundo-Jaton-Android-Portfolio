@@ -9,4 +9,9 @@
     <string name="repeat_password">Repeat password</string>
     <string name="register">Sign Up</string>
     <string name="not_registered_yet_sign_up">Are you not registered yet? Sign Up!</string>
+    <string name="share">Share</string>
+    <string name="cv">CV</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cv_text_description">Here goes the Curriculum Vitae</string>
 </resources>
