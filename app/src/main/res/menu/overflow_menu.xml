@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/cvFragment"
-        android:title="@string/cv" />
+        android:id="@+id/fragmentHome"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/fragmentExperience"
+        android:title="@string/experience" />
 
 </menu>

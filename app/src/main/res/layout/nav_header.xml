@@ -22,7 +22,7 @@
     android:background="?attr/colorPrimaryDark"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/navHeaderImage"
         android:layout_width="0dp"
         android:layout_height="0dp"

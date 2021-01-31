@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/cv_fragment"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/resume"
-        android:title="@string/cv" />
-    <!-- <item
-        android:id="@+id/rulesFragment"
-        android:icon="@drawable/rules"
-        android:title="@string/rules" /> -->
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/experienceFragment"
+        android:icon="@drawable/resume"
+        android:title="@string/experience" />
+
+    <item
+        android:id="@+id/projectsFragment"
+        android:icon="@drawable/resume"
+        android:title="@string/projects" />
+
+    <item
+        android:id="@+id/appsFragment"
+        android:icon="@drawable/resume"
+        android:title="@string/apps" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/resume"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/resume"
+        android:title="@string/contact" />
 
 </menu>

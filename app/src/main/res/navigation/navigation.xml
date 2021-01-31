@@ -19,10 +19,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_root"
-    app:startDestination="@+id/cvFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/cvFragment"
-        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.CurriculumVitaeFragment"
-        android:label="@string/cv"
-        tools:layout="@layout/fragment_curriculum_vitae" />
+        android:id="@+id/homeFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.ExperienceFragment"
+        android:label="fragment_experience"
+        tools:layout="@layout/fragment_experience" />
+    <fragment
+        android:id="@+id/appsFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.AppsFragment"
+        android:label="fragment_apps"
+        tools:layout="@layout/fragment_apps" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.facundojaton.android_portfolio.presentation.main_activity.view.ProjectsFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects" />
 </navigation>
