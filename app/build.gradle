@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.facundojaton.servnetworkapp"
+        applicationId "com.facundojaton.android_portfolio"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
