@@ -1,8 +1,8 @@
-<h1 style="text-align: center">
+<h1 align="center">
 Portfolio: Facundo Jatón - Android Developer
 </h1>
-<p style="text-align: center">
-<img src="pictures/profile_framed_2.jpg" alt="drawing" width="250"/>
+<p align="center">
+<img src="pictures/profile_framed_2.jpg" alt="drawing" width="275"/>
 </p>
 <br/>
 
@@ -16,7 +16,7 @@ apps that solve specific problems, apply the newest technologies and make people
 Working on [AutoSolve](https://www.autosolve.com.ar/#/), which is my own Startup, since 2018. Developed over 10 Android
 Apps, all of them in Kotlin and 4 Websites with Vue.js and Quasar. Backends with Firebase
 
-<h2 style="text-align: center"> Apps </h2>
+<h2 align="center"> Apps </h2>
 <h3> Play Amateur </h3>
 
 Android App that works as a social network and organizer of amateur sports matches. Inside, the app has features for
@@ -25,23 +25,23 @@ players and Sports facilities owners. Also include an Admin website for the cust
 and Firestore). Login with Email, Google and Facebook, User Profile with picture (Glide), Push notifications, Chat (1 on
 1 and GroupChats). MVP Pattern implemented.
 
-<p style="text-align: center">
+<p align="center">
 <a href='https://play.google.com/store/apps/details?id=com.autosolve.teamup.prod&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
 <img width="18%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
 </a>
 </p>
 
-<p style="text-align: center">
-<img src="pictures/PlayAmateur/Banner%20para%20playstore.jpeg" alt="BannerPA" width="70%"/>
+<p align="center">
+  <img src="pictures/PlayAmateur/Banner%20para%20playstore.jpeg" alt="BannerPA" width="70%"/>
 </p>
 <hr/>
-<p style="text-align: center">
-<img src="pictures/PlayAmateur/1.jpg" alt="ScreenshotPA1" width="200"/>
+<p align="center">
+  <img src="pictures/PlayAmateur/1.jpg" alt="ScreenshotPA1" width="200"/>
 <img src="pictures/PlayAmateur/2.jpg" alt="ScreenshotPA2" width="200"/>
 <img src="pictures/PlayAmateur/3.jpg" alt="ScreenshotPA3" width="200"/>
 </p>
-<p style="text-align: center">
-<img src="pictures/PlayAmateur/4.jpg" alt="ScreenshotPA4" width="200"/>
+<p align="center">
+  <img src="pictures/PlayAmateur/4.jpg" alt="ScreenshotPA4" width="200"/>
 <img src="pictures/PlayAmateur/5.jpg" alt="ScreenshotPA5" width="200"/>
 </p>
 <hr/>
@@ -56,17 +56,17 @@ with node.js). Login with Email, User Profile editable, Push notifications, Chat
 between users, webviews with customer webpages, issue tracker with updates and completion percentage, Instagram-like
 wall. MVP Pattern implemented.
 
-<p style="text-align: center">
-<a href='https://play.google.com/store/apps/details?id=com.autosolve.sadeapp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+<p align="center">
+  <a href='https://play.google.com/store/apps/details?id=com.autosolve.sadeapp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
 <img width="18%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 </p>
 <hr/>
-<p style="text-align: center">
-<img src="pictures/GrupoSade/1.jpg" alt="ScreenshotGS1" width="200"/>
+<p align="center">
+  <img src="pictures/GrupoSade/1.jpg" alt="ScreenshotGS1" width="200"/>
 <img style="margin-left: 30px" src="pictures/GrupoSade/2.jpg" alt="ScreenshotGS2" width="200"/>
 <img style="margin-left: 30px" src="pictures/GrupoSade/3.jpg" alt="ScreenshotGS3" width="200"/>
 </p>
-<p style="text-align: center">
+<p align="center">
 <img src="pictures/GrupoSade/4.jpg" alt="ScreenshotGS4" width="200"/>
 <img style="margin-left: 30px" src="pictures/GrupoSade/5.jpg" alt="ScreenshotGS5" width="210"/>
 </p>
@@ -80,7 +80,7 @@ monitoring system in the workplace, connected to the App through Firebase.
 Login with email, push notifications, web views with client web pages, alarm tracking in real time. MVP Pattern
 implemented
 
-<p style="text-align: center">
+<p align="center">
 <a href='https://play.google.com/store/apps/details?id=com.autosolve.cascada&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
 <img width="18%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
 </a>
@@ -101,8 +101,7 @@ and Firestore). Login with Email and Google, specific navigation by user-type, U
 (Glide), Push notifications, Google Maps and Location, Chat (1 on 1 and GroupChats), Lottie animations. MVP Pattern
 implemented.  
 
-
-<p style="text-align: center">
+<p align="center">
 Customers & Mechanics app <br/>
 <a href='https://play.google.com/store/apps/details?id=com.autosolve.mecanicapp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
 <img width="18%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
