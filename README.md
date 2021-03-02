@@ -1,5 +1,5 @@
 <h1 align="center">
-Portfolio: Facundo Jatón - Android Developer
+Portfolio: Facundo Jaton - Android Developer
 </h1>
 <p align="center">
 <img src="pictures/profile_framed_3.jpg" alt="drawing" width="275"/>
