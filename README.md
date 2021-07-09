@@ -12,8 +12,9 @@ development projects, I realized that my passion was in writing high-quality cod
 apps that solve specific problems, apply the newest technologies and make people's lives easier.
 
 ## Experience
+Working on [Tecso](https://tecso.coop/), since 2021. Currently taking part as a developer on a Android App Project for [Movistar and Prosegur](https://movistarproseguralarmas.es/app-mpa) 
 
-Working on [AutoSolve](https://www.autosolve.com.ar/#/), which is my own Startup, since 2018. Developed over 10 Android
+Also worked on [AutoSolve](https://www.autosolve.com.ar/#/), which was my own Startup, from 2018 until 2021. Developed over 10 Android
 Apps, all of them in Kotlin and 4 Websites with Vue.js and Quasar. Backends with Firebase
 
 <h2 align="center"> Apps </h2>
